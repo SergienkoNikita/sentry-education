@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <button @click="error">Ошибка на главной</button>
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -13,6 +14,12 @@ export default {
   name: 'HomeView',
   components: {
     HelloWorld,
+  },
+
+  methods: {
+    error() {
+      throw new Error('Ошибка на главной');
+    },
   },
 };
 </script>
